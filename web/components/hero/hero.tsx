@@ -16,7 +16,7 @@ const Hero = () => {
       <p className='text-2xl text-white mx-8 '>Whether you&rsquo;re on a business trip or vacation, keep your fitness routine strong wherever you go.</p>
       <p className='text-2xl text-white mx-8 mb-8'> Find a gym near you and stay on track with your goals!</p>
 
-          <Link className="bg-black text-white px-6 py-3 rounded-md hover:bg-amber-50 hover:text-black" href="/login">Get Started</Link>
+          <Link className="bg-black text-white px-6 py-3 rounded-md hover:bg-amber-50 hover:text-black" href="/home">Get Started</Link>
     </main>
    
   </div>
