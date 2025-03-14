@@ -1,5 +1,5 @@
 "use client"
-import GymList from '@/components/gymList/gymList';
+import Plans from '@/components/plans/page';
 import React from 'react'
 const Home = () => {   
   return (
@@ -15,10 +15,9 @@ const Home = () => {
         </div>
     </header>
 
+<Plans/>
     
-    <section className="container mx-auto px-4 py-10">
-    <GymList/>
-    </section>  
+    
     {/* <LocationSearch/>  */}
    
 </div>
