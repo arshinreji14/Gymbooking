@@ -98,54 +98,62 @@ console.log(gym);
   if (!gym) return <p className="text-center mt-10">Gym not found.</p>;
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 border rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold mb-4">{gym.name}</h2>
-      <p className="text-gray-600">Daily Price: ₹{gym.dailyPrice}</p>
-      <p className="text-gray-600 mb-4">Monthly Price: ₹{gym.monthlyPrice}</p>
+    <div className="max-w-lg w-full mx-auto mt-10 p-6 md:p-8 border rounded-lg shadow-lg bg-white">
+    {/* Gym Name */}
+    <h2 className="text-2xl font-bold mb-4 text-center">{gym.name}</h2>
+    
+    {/* Prices */}
+    <p className="text-gray-600 text-center">Daily Price: ₹{gym.dailyPrice}</p>
+    <p className="text-gray-600 mb-4 text-center">Monthly Price: ₹{gym.monthlyPrice}</p>
 
-      <div className="mb-4">
-        <label className="block mb-2">Select Booking Type:</label>
-        <select
-          className="w-full border p-2 rounded"
-          value={bookingType}
-          onChange={(e) => setBookingType(e.target.value as "day" | "month")}
-        >
-          <option value="day">One Day or Multiple Days</option>
-          <option value="month">One Month</option>
-        </select>
-      </div>
+    {/* Booking Type Selection */}
+    <div className="mb-4">
+      <label className="block mb-2 text-sm font-medium">Select Booking Type:</label>
+      <select
+        className="w-full border p-2 rounded focus:ring focus:ring-indigo-200"
+        value={bookingType}
+        onChange={(e) => setBookingType(e.target.value as "day" | "month")}
+      >
+        <option value="day">One Day or Multiple Days</option>
+        <option value="month">One Month</option>
+      </select>
+    </div>
 
+    {/* Date Picker */}
+    <div className="mb-4">
+      <label className="block mb-2 text-sm font-medium">Select Date:</label>
+      <DatePicker
+        selected={selectedDate}
+        onChange={(date) => setSelectedDate(date)}
+        className="w-full border p-2 rounded focus:ring focus:ring-indigo-200"
+        dateFormat="dd/MM/yyyy"
+        minDate={new Date()}
+      />
+    </div>
+
+    {/* End Date Picker (Only for Multiple Days) */}
+    {bookingType === "day" && (
       <div className="mb-4">
-        <label className="block mb-2">Select Date:</label>
+        <label className="block mb-2 text-sm font-medium">Select End Date (Optional for Multiple Days):</label>
         <DatePicker
-          selected={selectedDate}
-          onChange={(date) => setSelectedDate(date)}
-          className="w-full border p-2 rounded"
+          selected={endDate}
+          onChange={(date) => setEndDate(date)}
+          className="w-full border p-2 rounded focus:ring focus:ring-indigo-200"
           dateFormat="dd/MM/yyyy"
-          minDate={new Date()}
+          minDate={selectedDate || new Date()}
         />
       </div>
+    )}
 
-      {bookingType === "day" && (
-        <div className="mb-4">
-          <label className="block mb-2">Select End Date (Optional for Multiple Days):</label>
-          <DatePicker
-            selected={endDate}
-            onChange={(date) => setEndDate(date)}
-            className="w-full border p-2 rounded"
-            dateFormat="dd/MM/yyyy"
-            minDate={selectedDate || new Date()}
-          />
-        </div>
-      )}
+    {/* Total Price */}
+    {totalPrice !== null && (
+      <p className="text-lg font-semibold text-green-600 mb-4 text-center">Total Price: ₹{totalPrice}</p>
+    )}
 
-      {totalPrice !== null && (
-        <p className="text-lg font-semibold text-green-600 mb-4">Total Price: ₹{totalPrice}</p>
-      )}
-
-      <button className="w-full bg-blue-500 text-white py-2 rounded" onClick={handleBooking}>
-        Confirm Booking
-      </button>
-    </div>
+    {/* Confirm Button */}
+    <button className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded text-lg transition-all" onClick={handleBooking}>
+      Confirm Booking
+    </button>
+  </div>
   );
 }
