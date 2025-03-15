@@ -63,7 +63,7 @@ export default function GymList() {
                 <div className="p-4">
                   <h6 className="mb-2 text-gray-900 text-xl font-semibold">{gym.name}</h6>
                   <p className="text-gray-600 font-light">
-                    The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona.
+                    The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to Naviglio where you can enjoy the main night life in Barcelona.
                   </p>
                   <p className="text-black mt-2">Daily Price: ₹{gym.dailyPrice}</p>
                   <p className="text-black">Monthly Price: ₹{gym.monthlyPrice}</p>
