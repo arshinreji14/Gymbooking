@@ -1,56 +1,87 @@
-import Link from "next/link";
-import React from "react";
+import React from 'react';
+import { CheckIcon,} from 'lucide-react';
+import Link from 'next/link';
 
-const Plans = () => {
+const GymPlans = () => {
+  const plans = [
+    {
+      title: 'One Day Pass',
+      price: '$15',
+      features: [
+        'Access to single gym location',
+        'Full day usage (24 hours)',
+        'Basic equipment access',
+        'Locker room facilities'
+      ],
+      buttonText: 'Get Day Pass',
+      buttionLink: '/gymBooking'
+    },
+    {
+      title: 'All Gyms Membership',
+      price: '$49/month',
+      features: [
+        'Access to all gym locations',
+        'Unlimited daily visits',
+        'Full equipment access',
+        'Group fitness classes',
+        'Personal trainer consultation',
+        'Nutrition guidance'
+      ],
+      buttonText: 'Join Now',
+      buttionLink: '/subscription'
+    }
+  ];
+
   return (
-    <div className="flex justify-center p-8 md:p-16">
-    <div className="grid gap-6 md:grid-cols-2 max-w-4xl w-full">
-      {/* Single Gym Plan */}
-      <div className="group relative flex flex-col w-full text-gray-900 rounded-2xl border border-gray-300 text-center transition-all duration-500 p-6 sm:p-8 md:p-10 bg-gradient-to-r from-indigo-600 to-violet-600 hover:before:opacity-100 before:content-[''] before:absolute before:bg-indigo-800 before:w-full before:h-full before:top-0 before:left-0 before:rounded-2xl before:opacity-0 before:transition-all before:duration-500 before:z-0">
-        <div className="mb-10 flex flex-col relative">
-          <span className="font-manrope text-4xl sm:text-5xl lg:text-6xl font-semibold mb-2 text-white">
-            Single
-          </span>
-          <span className="text-lg sm:text-xl text-gray-300">Access to a Single Gym</span>
-          <ul className="list-disc text-white text-sm sm:text-base font-bold space-y-4 pt-5 text-left px-6 sm:px-10">
-            <li>One Day Pass</li>
-            <li>One Week Pass</li>
-            <li>One Month Membership</li>
-            <li>Single Gym</li>
-          </ul>
+    <div className="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+      <div className="w-full max-w-4xl">
+        <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
+          Membership Plans
+        </h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {plans.map((plan) => (
+            <div 
+              key={plan.title} 
+              className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:scale-105 hover:shadow-2xl"
+            >
+              <div className="p-6">
+                <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                  {plan.title}
+                </h3>
+                <div className="text-4xl font-bold text-blue-600 mb-6">
+                  {plan.price}
+                </div>
+                <ul className="space-y-3 mb-6">
+                  {plan.features.map((feature) => (
+                    <li 
+                      key={feature} 
+                      className="flex items-center text-gray-700"
+                    >
+                      <CheckIcon 
+                        className="w-5 h-5 text-blue-500 mr-3" 
+                        strokeWidth={2.5}
+                      />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+               
+                <Link href={plan.buttionLink}><button 
+                  className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold 
+                             hover:bg-blue-700 transition-colors duration-300 
+                             focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+              >
+                 {plan.buttonText}
+                  
+                </button></Link>
+                
+              </div>
+            </div>
+          ))}
         </div>
-        <Link
-          href="/booking"
-          className="relative py-2.5 px-5 bg-white shadow-sm rounded-full transition-all duration-500 text-base sm:text-lg text-indigo-600 font-semibold text-center w-fit mx-auto"
-        >
-          Choose Plan
-        </Link>
-      </div>
-
-      {/* Multiple Gyms Plan */}
-      <div className="group relative flex flex-col w-full text-gray-900 rounded-2xl border border-gray-300 text-center transition-all duration-500 p-6 sm:p-8 md:p-10 bg-gradient-to-r from-indigo-600 to-violet-600 hover:before:opacity-100 before:content-[''] before:absolute before:bg-indigo-800 before:w-full before:h-full before:top-0 before:left-0 before:rounded-2xl before:opacity-0 before:transition-all before:duration-500 before:z-0">
-        <div className="mb-10 flex flex-col relative">
-          <span className="font-manrope text-4xl sm:text-5xl lg:text-6xl font-semibold mb-2 text-white">
-            Multiple
-          </span>
-          <span className="text-lg sm:text-xl text-gray-300">Access to Multiple Gyms</span>
-          <ul className="list-disc text-white text-sm sm:text-base font-bold space-y-4 pt-5 text-left px-6 sm:px-10">
-            <li>Single plan, multiple gyms</li>
-            <li>Select your favorite gyms</li>
-            <li>For Hybrid Workers</li>
-            <li>Multiple Gyms</li>
-          </ul>
-        </div>
-        <Link
-          href="/multyBooking"
-          className="relative py-2.5 px-5 bg-white shadow-sm rounded-full transition-all duration-500 text-base sm:text-lg text-indigo-600 font-semibold text-center w-fit mx-auto"
-        >
-          Choose Plan
-        </Link>
       </div>
     </div>
-  </div>
   );
 };
 
-export default Plans;
+export default GymPlans;

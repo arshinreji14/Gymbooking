@@ -1,12 +1,12 @@
 
-import MgymList from '@/components/mgymList/page'
+import GymListing from '@/components/gymListing/page'
 import React from 'react'
 
 const Mgyms = () => {
   return (
     <div>
       <section className="container mx-auto px-4 py-10">
-    <MgymList/>
+    <GymListing/>
     </section>  
     </div>
   )
