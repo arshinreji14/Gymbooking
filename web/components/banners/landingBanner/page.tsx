@@ -15,7 +15,7 @@ export default function OnboardingPage() {
       description: "Your personal fitness scheduling companion. Book classes, track progress, and achieve your fitness goals.",
       backgroundImage: "/fitness-welcome.jpg",
       buttonText: "Get Started",
-       buttonLink:""
+      
     },
     {
       icon: <Calendar className="w-16 h-16 text-green-600 mx-auto" />,
@@ -23,7 +23,7 @@ export default function OnboardingPage() {
       description: "Browse hundreds of fitness classes, from yoga to high-intensity training. Reserve your spot with just a few taps.",
       backgroundImage: "/class-booking.jpg",
       buttonText: "Next",
-       buttonLink:""
+       
     },
     {
       icon: <Trophy className="w-16 h-16 text-orange-600 mx-auto" />,
@@ -60,7 +60,7 @@ export default function OnboardingPage() {
       </div>
 
       {/* Content Section */}
-      <div className="w-[23rem] md:w-1/2 bg-white flex flex-col justify-center p-6 md:p-12 relative rounded-lg shadow-2xl md:rounded-none ">
+      <div className="w-[23rem] md:w-1/2 bg-white flex flex-col  p-6 md:p-12 relative rounded-lg shadow-2xl md:rounded-none m-2 md:m-0">
         <div className="max-w-md mx-auto w-full">
           {/* Icon */}
           <div className="mb-6">
@@ -88,7 +88,7 @@ export default function OnboardingPage() {
               </button>
             )}
             
-            <Link href={onboardingSteps[currentStep].buttonLink}><button 
+            <Link href={onboardingSteps[currentStep].buttonLink || ""}><button 
               onClick={handleNextStep}
               className="bg-blue-600 text-white px-8 py-3 rounded-full flex items-center justify-center space-x-2 hover:bg-blue-700 transition-colors w-full md:w-auto"
             >
