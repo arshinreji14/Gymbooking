@@ -1,16 +1,17 @@
-// src/app/gyms/page.tsx
 'use client';
 
 import React, { useState, useEffect } from 'react';
-
 import Link from 'next/link';
 import { MapPin, Dumbbell } from 'lucide-react';
 import { Gym } from '@/app/schema/gyms';
 import LocationSearch from '../locationSearch/page';
 
+const cities = ["kochi", "Kozhikodu", "mumbai", "Bangalore", "delhi", "kannur"];
+
 export default function GymListingPage() {
   const [gyms, setGyms] = useState<Gym[]>([]);
   const [loading, setLoading] = useState(false);
+  const [selectedCity, setSelectedCity] = useState<string | null>(null);
 
   const fetchGyms = async (city?: string) => {
     setLoading(true);
@@ -35,12 +36,26 @@ export default function GymListingPage() {
       
       <LocationSearch onSearch={fetchGyms} />
 
+      {/* City Filter */}
+      <div className="grid grid-cols-3 gap-2 md:grid-cols-6 mb-6">
+        {cities.map((city) => (
+          <button 
+            key={city} 
+            className={`text-sm px-3 py-2 rounded-md border ${selectedCity === city ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700'} hover:bg-blue-500 hover:text-white transition`}
+            onClick={() => {
+              setSelectedCity(city);
+              fetchGyms(city);
+            }}
+          >
+            {city}
+          </button>
+        ))}
+      </div>
+
       {loading ? (
         <div className="text-center">Loading gyms...</div>
       ) : gyms.length === 0 ? (
-        <div className="text-center text-gray-500">
-          No gyms found. Try a different search.
-        </div>
+        <div className="text-center text-gray-500">No gyms found. Try a different search.</div>
       ) : (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {gyms.map((gym) => (

@@ -1,15 +1,17 @@
-"use client"
-import HomepageBanner from '@/components/banners/homeBanner/page';
-import GymPlans from '@/components/plans/page';
-import Testimonials from '@/components/testimonials/page';
+import HomepageBanner from '@/components/banners/homeBanner/page'
+import GallerySection from '@/components/gallery/gallery'
+import GymPlans from '@/components/plans/page'
+import Testimonials from '@/components/testimonials/page'
 import React from 'react'
-const Home = () => {   
+
+const Home = () => {
   return (
-<div>
-   <HomepageBanner/>
-<GymPlans/> 
-<Testimonials/>      
-</div>
+    <div>
+      <HomepageBanner/>
+      <GymPlans/>
+      <GallerySection/>
+      <Testimonials/>
+    </div>
   )
 }
 

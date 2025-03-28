@@ -1,28 +1,29 @@
+"use client"
 import React, { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const HomepageBanner = () => {
   const slides = [
     {
-      image: "/api/placeholder/1200/600",
+      image: "/bgimage/1.jpeg",
       title: "Transform Your Fitness Journey",
       subtitle: "Unlimited Access to Premium Facilities",
       buttonText: "Join Now",
-      overlay: "bg-black bg-opacity-40"
+      overlay: " "
     },
     {
-      image: "/api/placeholder/1200/600",
+      image: "/bgimage/2.jpeg",
       title: "State-of-the-Art Equipment",
       subtitle: "Professional Training, Personalized Experience",
       buttonText: "Explore Memberships",
-      overlay: "bg-blue-900 bg-opacity-50"
+      overlay: ""
     },
     {
-      image: "/api/placeholder/1200/600",
+      image: "/bgimage/3.jpeg",
       title: "Group Classes & Personal Training",
       subtitle: "Achieve Your Goals Together",
       buttonText: "View Classes",
-      overlay: "bg-gray-900 bg-opacity-60"
+      overlay: ""
     }
   ];
 

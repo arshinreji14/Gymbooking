@@ -1,10 +1,11 @@
-import Hero from "@/components/hero/hero";
+
+import SignIn from "./(routes)/signin/page";
   
 
 export default function Home() {
   return (
     <div className="">
-      <Hero/>
+      <SignIn/> 
     </div>
   );
 }
