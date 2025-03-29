@@ -18,7 +18,6 @@ export interface Gym {
   
   export interface BookingSlot {
     id: string;
-    date: string;
     time: string;
     capacity: number;
     currentBookings: number;

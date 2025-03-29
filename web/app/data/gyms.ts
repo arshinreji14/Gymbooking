@@ -5,7 +5,7 @@ import { Gym } from "../schema/gyms";
 
 export const gymData: Gym[] =[
     {
-      "id": "kochi-mgroad-4",
+      "id": "kochi-mgroad-3",
       "name": "Ultimate Fitness Center",
       "address": "18 MG Road",
       "city": "Kochi",
@@ -16,16 +16,16 @@ export const gymData: Gym[] =[
       "membershipPrice": 55,
       "coordinates": { "lat": 9.9673, "lng": 76.2425 },
       "availableSlots": [
-        { "id": "slot-1", "date": "2024-03-26", "time": "06:00 AM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-2", "date": "2024-03-26", "time": "07:00 AM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-3", "date": "2024-03-26", "time": "08:00 AM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-4", "date": "2024-03-26", "time": "09:00 AM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-5", "date": "2024-03-26", "time": "04:00 PM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-6", "date": "2024-03-26", "time": "05:00 PM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-7", "date": "2024-03-26", "time": "06:00 PM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-8", "date": "2024-03-26", "time": "07:00 PM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-9", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }, 
-        { "id": "slot-10", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }
+        { "id": "slot-1", "time": "06-07 AM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-2", "time": "07-08 AM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-3", "time": "08-09 AM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-4", "time": "09-10 AM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-5", "time": "04-05 PM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-6", "time": "05-06 PM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-7", "time": "06-07 PM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-8", "time": "07-08 PM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-9", "time": "08-09 PM", "capacity": 30, "currentBookings": 12 }, 
+        { "id": "slot-10", "time": "09-10 PM", "capacity": 30, "currentBookings": 12 }
       ]
     },
     {
@@ -40,20 +40,20 @@ export const gymData: Gym[] =[
       "membershipPrice": 60,
       "coordinates": { "lat": 10.015, "lng": 76.3419 },
       "availableSlots": [
-        { "id": "slot-1", "date": "2024-03-26", "time": "06:00 AM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-2", "date": "2024-03-26", "time": "07:00 AM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-3", "date": "2024-03-26", "time": "08:00 AM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-4", "date": "2024-03-26", "time": "09:00 AM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-5", "date": "2024-03-26", "time": "04:00 PM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-6", "date": "2024-03-26", "time": "05:00 PM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-7", "date": "2024-03-26", "time": "06:00 PM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-8", "date": "2024-03-26", "time": "07:00 PM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-9", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }, 
-        { "id": "slot-10", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }
+        { "id": "slot-1", "time": "06-07 AM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-2", "time": "07-08 AM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-3", "time": "08-09 AM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-4", "time": "09-10 AM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-5", "time": "04-05 PM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-6", "time": "05-06 PM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-7", "time": "06-07 PM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-8", "time": "07-08 PM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-9", "time": "08-09 PM", "capacity": 30, "currentBookings": 12 }, 
+        { "id": "slot-10", "time": "09-10 PM", "capacity": 30, "currentBookings": 12 }
       ]
     },
     {
-      "id": "kozhikodu-mgroad-4",
+      "id": "kozhikodu-mgroad-3",
       "name": "Ultimate Fitness Center",
       "address": "18 MG Road",
       "city": "Kozhikodu",
@@ -64,21 +64,21 @@ export const gymData: Gym[] =[
       "membershipPrice": 55,
       "coordinates": { "lat": 9.9673, "lng": 76.2425 },
       "availableSlots": [
-        { "id": "slot-1", "date": "2024-03-26", "time": "06:00 AM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-2", "date": "2024-03-26", "time": "07:00 AM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-3", "date": "2024-03-26", "time": "08:00 AM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-4", "date": "2024-03-26", "time": "09:00 AM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-5", "date": "2024-03-26", "time": "04:00 PM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-6", "date": "2024-03-26", "time": "05:00 PM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-7", "date": "2024-03-26", "time": "06:00 PM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-8", "date": "2024-03-26", "time": "07:00 PM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-9", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }, 
-        { "id": "slot-10", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }
+        { "id": "slot-1", "time": "06-07 AM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-2", "time": "07-08 AM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-3", "time": "08-09 AM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-4", "time": "09-10 AM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-5", "time": "04-05 PM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-6", "time": "05-06 PM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-7", "time": "06-07 PM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-8", "time": "07-08 PM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-9", "time": "08-09 PM", "capacity": 30, "currentBookings": 12 }, 
+        { "id": "slot-10", "time": "09-10 PM", "capacity": 30, "currentBookings": 12 }
       ]
       
     },
     {
-      "id": "kozhikodu-m3-4",
+      "id": "kozhikodu-m3-3",
       "name": "maxfit Fitness Center",
       "address": "18 MG Road",
       "city": "Kochi",
@@ -89,20 +89,20 @@ export const gymData: Gym[] =[
       "membershipPrice": 55,
       "coordinates": { "lat": 9.9673, "lng": 76.2425 },
       "availableSlots": [
-        { "id": "slot-1", "date": "2024-03-26", "time": "06:00 AM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-2", "date": "2024-03-26", "time": "07:00 AM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-3", "date": "2024-03-26", "time": "08:00 AM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-4", "date": "2024-03-26", "time": "09:00 AM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-5", "date": "2024-03-26", "time": "04:00 PM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-6", "date": "2024-03-26", "time": "05:00 PM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-7", "date": "2024-03-26", "time": "06:00 PM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-8", "date": "2024-03-26", "time": "07:00 PM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-9", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }, 
-        { "id": "slot-10", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }
+        { "id": "slot-1", "time": "06-07 AM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-2", "time": "07-08 AM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-3", "time": "08-09 AM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-4", "time": "09-10 AM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-5", "time": "04-05 PM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-6", "time": "05-06 PM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-7", "time": "06-07 PM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-8", "time": "07-08 PM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-9", "time": "08-09 PM", "capacity": 30, "currentBookings": 12 }, 
+        { "id": "slot-10", "time": "09-10 PM", "capacity": 30, "currentBookings": 12 }
       ]
     },
     {
-      "id": "ko-mgroad-4",
+      "id": "ko-mgroad-3",
       "name": "CrossFit Fitness Center",
       "address": "18 MG Road",
       "city": "Kozhikodu",
@@ -113,20 +113,20 @@ export const gymData: Gym[] =[
       "membershipPrice": 55,
       "coordinates": { "lat": 9.9673, "lng": 76.2425 },
       "availableSlots": [
-        { "id": "slot-1", "date": "2024-03-26", "time": "06:00 AM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-2", "date": "2024-03-26", "time": "07:00 AM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-3", "date": "2024-03-26", "time": "08:00 AM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-4", "date": "2024-03-26", "time": "09:00 AM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-5", "date": "2024-03-26", "time": "04:00 PM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-6", "date": "2024-03-26", "time": "05:00 PM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-7", "date": "2024-03-26", "time": "06:00 PM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-8", "date": "2024-03-26", "time": "07:00 PM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-9", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }, 
-        { "id": "slot-10", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }
+        { "id": "slot-1", "time": "06-07 AM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-2", "time": "07-08 AM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-3", "time": "08-09 AM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-4", "time": "09-10 AM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-5", "time": "04-05 PM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-6", "time": "05-06 PM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-7", "time": "06-07 PM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-8", "time": "07-08 PM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-9", "time": "08-09 PM", "capacity": 30, "currentBookings": 12 }, 
+        { "id": "slot-10", "time": "09-10 PM", "capacity": 30, "currentBookings": 12 }
       ]
     },
     {
-      "id": "ko-mgd-4",
+      "id": "ko-mgd-3",
       "name": "CrFit Fitness Center",
       "address": "18 MG Road",
       "city": "Kannur",
@@ -137,16 +137,16 @@ export const gymData: Gym[] =[
       "membershipPrice": 55,
       "coordinates": { "lat": 9.9673, "lng": 76.2425 },
       "availableSlots": [
-        { "id": "slot-1", "date": "2024-03-26", "time": "06:00 AM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-2", "date": "2024-03-26", "time": "07:00 AM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-3", "date": "2024-03-26", "time": "08:00 AM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-4", "date": "2024-03-26", "time": "09:00 AM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-5", "date": "2024-03-26", "time": "04:00 PM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-6", "date": "2024-03-26", "time": "05:00 PM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-7", "date": "2024-03-26", "time": "06:00 PM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-8", "date": "2024-03-26", "time": "07:00 PM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-9", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }, 
-        { "id": "slot-10", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }
+        { "id": "slot-1", "time": "06-07 AM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-2", "time": "07-08 AM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-3", "time": "08-09 AM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-4", "time": "09-10 AM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-5", "time": "04-05 PM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-6", "time": "05-06 PM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-7", "time": "06-07 PM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-8", "time": "07-08 PM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-9", "time": "08-09 PM", "capacity": 30, "currentBookings": 12 }, 
+        { "id": "slot-10", "time": "09-10 PM", "capacity": 30, "currentBookings": 12 }
       ]
     },
     {
@@ -161,16 +161,16 @@ export const gymData: Gym[] =[
       "membershipPrice": 75,
       "coordinates": { "lat": 19.0667, "lng": 72.826 },
       "availableSlots": [
-        { "id": "slot-1", "date": "2024-03-26", "time": "06:00 AM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-2", "date": "2024-03-26", "time": "07:00 AM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-3", "date": "2024-03-26", "time": "08:00 AM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-4", "date": "2024-03-26", "time": "09:00 AM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-5", "date": "2024-03-26", "time": "04:00 PM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-6", "date": "2024-03-26", "time": "05:00 PM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-7", "date": "2024-03-26", "time": "06:00 PM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-8", "date": "2024-03-26", "time": "07:00 PM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-9", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }, 
-        { "id": "slot-10", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }
+        { "id": "slot-1", "time": "06-07 AM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-2", "time": "07-08 AM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-3", "time": "08-09 AM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-4", "time": "09-10 AM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-5", "time": "04-05 PM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-6", "time": "05-06 PM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-7", "time": "06-07 PM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-8", "time": "07-08 PM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-9", "time": "08-09 PM", "capacity": 30, "currentBookings": 12 }, 
+        { "id": "slot-10", "time": "09-10 PM", "capacity": 30, "currentBookings": 12 }
       ]
     },
     {
@@ -183,18 +183,18 @@ export const gymData: Gym[] =[
       "amenities": ["Corporate Memberships", "Spa", "Martial Arts"],
       "facilities": ["MMA Cage", "Boxing Ring", "Weight Room"],
       "membershipPrice": 80,
-      "coordinates": { "lat": 28.6315, "lng": 77.2167 },
+      "coordinates": { "lat": 26.6315, "lng": 77.2167 },
       "availableSlots": [
-        { "id": "slot-1", "date": "2024-03-26", "time": "06:00 AM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-2", "date": "2024-03-26", "time": "07:00 AM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-3", "date": "2024-03-26", "time": "08:00 AM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-4", "date": "2024-03-26", "time": "09:00 AM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-5", "date": "2024-03-26", "time": "04:00 PM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-6", "date": "2024-03-26", "time": "05:00 PM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-7", "date": "2024-03-26", "time": "06:00 PM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-8", "date": "2024-03-26", "time": "07:00 PM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-9", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }, 
-        { "id": "slot-10", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }
+        { "id": "slot-1", "time": "06-07 AM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-2", "time": "07-08 AM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-3", "time": "08-09 AM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-4", "time": "09-10 AM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-5", "time": "04-05 PM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-6", "time": "05-06 PM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-7", "time": "06-07 PM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-8", "time": "07-08 PM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-9", "time": "08-09 PM", "capacity": 30, "currentBookings": 12 }, 
+        { "id": "slot-10", "time": "09-10 PM", "capacity": 30, "currentBookings": 12 }
       ]
     },
     {
@@ -209,16 +209,16 @@ export const gymData: Gym[] =[
       "membershipPrice": 65,
       "coordinates": { "lat": 12.9716, "lng": 77.5946 },
       "availableSlots": [
-        { "id": "slot-1", "date": "2024-03-26", "time": "06:00 AM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-2", "date": "2024-03-26", "time": "07:00 AM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-3", "date": "2024-03-26", "time": "08:00 AM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-4", "date": "2024-03-26", "time": "09:00 AM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-5", "date": "2024-03-26", "time": "04:00 PM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-6", "date": "2024-03-26", "time": "05:00 PM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-7", "date": "2024-03-26", "time": "06:00 PM", "capacity": 30, "currentBookings": 18 },
-        { "id": "slot-8", "date": "2024-03-26", "time": "07:00 PM", "capacity": 30, "currentBookings": 12 },
-        { "id": "slot-9", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }, 
-        { "id": "slot-10", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }
+        { "id": "slot-1", "time": "06-07 AM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-2", "time": "07-08 AM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-3", "time": "08-09 AM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-4", "time": "09-10 AM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-5", "time": "04-05 PM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-6", "time": "05-06 PM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-7", "time": "06-07 PM", "capacity": 30, "currentBookings": 18 },
+        { "id": "slot-8", "time": "07-08 PM", "capacity": 30, "currentBookings": 12 },
+        { "id": "slot-9", "time": "08-09 PM", "capacity": 30, "currentBookings": 12 }, 
+        { "id": "slot-10", "time": "09-10 PM", "capacity": 30, "currentBookings": 12 }
       ]
     }, {
         "id": "mumbai-andheri-1",
@@ -232,16 +232,16 @@ export const gymData: Gym[] =[
         "membershipPrice": 49,
         "coordinates": { "lat": 19.1304, "lng": 72.8328 },
         "availableSlots": [
-          { "id": "slot-1", "date": "2024-03-26", "time": "06:00 AM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-2", "date": "2024-03-26", "time": "07:00 AM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-3", "date": "2024-03-26", "time": "08:00 AM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-4", "date": "2024-03-26", "time": "09:00 AM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-5", "date": "2024-03-26", "time": "04:00 PM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-6", "date": "2024-03-26", "time": "05:00 PM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-7", "date": "2024-03-26", "time": "06:00 PM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-8", "date": "2024-03-26", "time": "07:00 PM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-9", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }, 
-          { "id": "slot-10", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }
+          { "id": "slot-1", "time": "06- AM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-2", "time": "07- AM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-3", "time": "08- AM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-3", "time": "09- AM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-5", "time": "04- PM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-6", "time": "05- PM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-7", "time": "06- PM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-8", "time": "07- PM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-9", "time": "08- PM", "capacity": 30, "currentBookings": 12 }, 
+          { "id": "slot-10", "time": "08- PM", "capacity": 30, "currentBookings": 12 }
         ]
       },
       {
@@ -256,16 +256,16 @@ export const gymData: Gym[] =[
         "membershipPrice": 69,
         "coordinates": { "lat": 19.0607, "lng": 72.8362 },
         "availableSlots": [
-          { "id": "slot-1", "date": "2024-03-26", "time": "06:00 AM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-2", "date": "2024-03-26", "time": "07:00 AM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-3", "date": "2024-03-26", "time": "08:00 AM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-4", "date": "2024-03-26", "time": "09:00 AM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-5", "date": "2024-03-26", "time": "04:00 PM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-6", "date": "2024-03-26", "time": "05:00 PM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-7", "date": "2024-03-26", "time": "06:00 PM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-8", "date": "2024-03-26", "time": "07:00 PM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-9", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }, 
-          { "id": "slot-10", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }
+          { "id": "slot-1", "time": "06- AM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-2", "time": "07- AM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-3", "time": "08- AM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-3", "time": "09- AM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-5", "time": "04- PM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-6", "time": "05- PM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-7", "time": "06- PM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-8", "time": "07- PM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-9", "time": "08- PM", "capacity": 30, "currentBookings": 12 }, 
+          { "id": "slot-10", "time": "08- PM", "capacity": 30, "currentBookings": 12 }
         ]
       },
       {
@@ -280,16 +280,16 @@ export const gymData: Gym[] =[
         "membershipPrice": 75,
         "coordinates": { "lat": 18.933, "lng": 72.826 },
         "availableSlots": [
-          { "id": "slot-1", "date": "2024-03-26", "time": "06:00 AM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-2", "date": "2024-03-26", "time": "07:00 AM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-3", "date": "2024-03-26", "time": "08:00 AM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-4", "date": "2024-03-26", "time": "09:00 AM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-5", "date": "2024-03-26", "time": "04:00 PM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-6", "date": "2024-03-26", "time": "05:00 PM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-7", "date": "2024-03-26", "time": "06:00 PM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-8", "date": "2024-03-26", "time": "07:00 PM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-9", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }, 
-          { "id": "slot-10", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }
+          { "id": "slot-1", "time": "06- AM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-2", "time": "07- AM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-3", "time": "08- AM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-3", "time": "09- AM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-5", "time": "04- PM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-6", "time": "05- PM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-7", "time": "06- PM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-8", "time": "07- PM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-9", "time": "08- PM", "capacity": 30, "currentBookings": 12 }, 
+          { "id": "slot-10", "time": "08- PM", "capacity": 30, "currentBookings": 12 }
         ]
       },
       {
@@ -302,18 +302,18 @@ export const gymData: Gym[] =[
         "amenities": ["Free Wi-Fi", "Corporate Memberships", "Kickboxing Classes"],
         "facilities": ["Boxing Ring", "Treadmill Zone", "Strength Training"],
         "membershipPrice": 55,
-        "coordinates": { "lat": 28.6315, "lng": 77.2167 },
+        "coordinates": { "lat": 26.6315, "lng": 77.2167 },
         "availableSlots": [
-          { "id": "slot-1", "date": "2024-03-26", "time": "06:00 AM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-2", "date": "2024-03-26", "time": "07:00 AM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-3", "date": "2024-03-26", "time": "08:00 AM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-4", "date": "2024-03-26", "time": "09:00 AM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-5", "date": "2024-03-26", "time": "04:00 PM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-6", "date": "2024-03-26", "time": "05:00 PM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-7", "date": "2024-03-26", "time": "06:00 PM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-8", "date": "2024-03-26", "time": "07:00 PM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-9", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }, 
-          { "id": "slot-10", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }
+          { "id": "slot-1", "time": "06- AM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-2", "time": "07- AM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-3", "time": "08- AM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-3", "time": "09- AM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-5", "time": "04- PM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-6", "time": "05- PM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-7", "time": "06- PM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-8", "time": "07- PM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-9", "time": "08- PM", "capacity": 30, "currentBookings": 12 }, 
+          { "id": "slot-10", "time": "08- PM", "capacity": 30, "currentBookings": 12 }
         ]
       },
       {
@@ -326,18 +326,18 @@ export const gymData: Gym[] =[
         "amenities": ["Sauna", "Free Parking", "Yoga Classes"],
         "facilities": ["Steam Room", "CrossFit Zone", "Weight Training"],
         "membershipPrice": 60,
-        "coordinates": { "lat": 28.5263, "lng": 77.2192 },
+        "coordinates": { "lat": 26.5263, "lng": 77.2192 },
         "availableSlots": [
-          { "id": "slot-1", "date": "2024-03-26", "time": "06:00 AM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-2", "date": "2024-03-26", "time": "07:00 AM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-3", "date": "2024-03-26", "time": "08:00 AM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-4", "date": "2024-03-26", "time": "09:00 AM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-5", "date": "2024-03-26", "time": "04:00 PM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-6", "date": "2024-03-26", "time": "05:00 PM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-7", "date": "2024-03-26", "time": "06:00 PM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-8", "date": "2024-03-26", "time": "07:00 PM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-9", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }, 
-          { "id": "slot-10", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }
+          { "id": "slot-1", "time": "06- AM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-2", "time": "07- AM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-3", "time": "08- AM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-3", "time": "09- AM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-5", "time": "04- PM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-6", "time": "05- PM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-7", "time": "06- PM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-8", "time": "07- PM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-9", "time": "08- PM", "capacity": 30, "currentBookings": 12 }, 
+          { "id": "slot-10", "time": "08- PM", "capacity": 30, "currentBookings": 12 }
         ]
       },
       {
@@ -352,16 +352,16 @@ export const gymData: Gym[] =[
         "membershipPrice": 60,
         "coordinates": { "lat": 12.9791, "lng": 77.6408 },
         "availableSlots": [
-          { "id": "slot-1", "date": "2024-03-26", "time": "06:00 AM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-2", "date": "2024-03-26", "time": "07:00 AM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-3", "date": "2024-03-26", "time": "08:00 AM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-4", "date": "2024-03-26", "time": "09:00 AM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-5", "date": "2024-03-26", "time": "04:00 PM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-6", "date": "2024-03-26", "time": "05:00 PM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-7", "date": "2024-03-26", "time": "06:00 PM", "capacity": 30, "currentBookings": 18 },
-          { "id": "slot-8", "date": "2024-03-26", "time": "07:00 PM", "capacity": 30, "currentBookings": 12 },
-          { "id": "slot-9", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }, 
-          { "id": "slot-10", "date": "2024-03-26", "time": "08:00 PM", "capacity": 30, "currentBookings": 12 }
+          { "id": "slot-1", "time": "06- AM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-2", "time": "07- AM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-3", "time": "08- AM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-3", "time": "09- AM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-5", "time": "04- PM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-6", "time": "05- PM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-7", "time": "06- PM", "capacity": 30, "currentBookings": 18 },
+          { "id": "slot-8", "time": "07- PM", "capacity": 30, "currentBookings": 12 },
+          { "id": "slot-9", "time": "08- PM", "capacity": 30, "currentBookings": 12 }, 
+          { "id": "slot-10", "time": "08- PM", "capacity": 30, "currentBookings": 12 }
         ]
       },
   ]

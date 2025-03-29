@@ -2,14 +2,17 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
-import { Calendar, Clock, Users, Dumbbell, Wifi, ShowerHead } from 'lucide-react';
+import { Clock, Users, Dumbbell, } from 'lucide-react';
 import { BookingSlot, Gym } from '@/app/schema/gyms';
 import { gymData } from '@/app/data/gyms';
 
 export default function GymBookingPage() {
   const params = useParams();
   const [gym, setGym] = useState<Gym | null>(null);
+  const [selectedDate, setSelectedDate] = useState<string | null>(null);
   const [selectedSlot, setSelectedSlot] = useState<BookingSlot | null>(null);
+  const [selectedWorkout, setSelectedWorkout] = useState<string | null>(null);
+  const [personalTrainer, setPersonalTrainer] = useState<boolean>(false);
 
   useEffect(() => {
     const foundGym = gymData.find(g => g.id === params.gymId);
@@ -18,21 +21,17 @@ export default function GymBookingPage() {
 
   if (!gym) return <div>Loading...</div>;
 
-  const handleSlotSelection = (slot: BookingSlot) => {
-    setSelectedSlot(slot);
-  };
+  const today = new Date().toISOString().split('T')[0];
 
   const handleBooking = () => {
     if (selectedSlot) {
-      alert(`Booked slot: ${selectedSlot.date} at ${selectedSlot.time}`);
+      alert(`Booked slot:  ${selectedSlot.time}\nWorkout: ${selectedWorkout}\nTrainer: ${personalTrainer ? 'Yes' : 'No'}`);
     }
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 h-full md:h-screen">
-      <h1 className="text-black text-4xl font-bold mt-20 mb-10 flex justify-center">
-        Select Your Slot for Booking
-      </h1>
+    <div className="container mx-auto px-4 py-8 h-auto md:h-full mb-32">
+      <h1 className="text-black text-4xl font-bold mt-20 mb-10 flex justify-center">Select Your Slot for Booking</h1>
 
       <div className="grid md:grid-cols-3 gap-8">
         {/* Gym Details */}
@@ -46,64 +45,91 @@ export default function GymBookingPage() {
           </div>
         </div>
 
+        {/* Date Selection */}
+        <div className="col-span-1">
+          <h2 className="text-2xl font-bold mb-4">Select Date</h2>
+          <input 
+            type="date" 
+            className=" p-2 rounded-lg w-auto border-2 " 
+            min={today}
+            onChange={(e) => setSelectedDate(e.target.value)} 
+          />
+        </div>
+
         {/* Available Slots Grid */}
-        <div className="col-span-1">
-          <h2 className="text-2xl font-bold mb-4">Available Slots</h2>
-          <div className="grid grid-cols-2 gap-4">
-            {gym.availableSlots.map((slot) => (
-              <div 
-                key={slot.id}
-                onClick={() => handleSlotSelection(slot)}
-                className={`bg-white shadow-md rounded-lg p-4 cursor-pointer transition hover:shadow-lg
-                  ${selectedSlot?.id === slot.id ? 'border-2 border-blue-600' : ''}
-                  ${slot.currentBookings >= slot.capacity ? 'opacity-50 cursor-not-allowed' : ''}`}
-              >
-                <div className="flex items-center justify-between">
-                  <span className="flex items-center"><Clock className="text-green-600" /> {slot.time}</span>
-                  <span className="flex items-center"><Users className="text-gray-600" /> {slot.currentBookings}/{slot.capacity}</span>
+        {selectedDate && (
+          <div className="col-span-1">
+            <h2 className="text-2xl font-bold mb-4">Available Slots</h2>
+            <div className="grid grid-cols-2 gap-4">
+              {gym.availableSlots
+                .map((slot) => (
+                  <div 
+                    key={slot.id}
+                    onClick={() => setSelectedSlot(slot)}
+                    className={`bg-white shadow-md rounded-lg p-4 cursor-pointer transition hover:shadow-lg
+                      ${selectedSlot?.id === slot.id ? 'border-2 border-blue-600' : ''}
+                      ${slot.currentBookings >= slot.capacity ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  >
+                    <div className="flex items-center justify-between font-bold">
+                      <span className="flex items-center"><Clock className="text-green-600" /> {slot.time}</span>
+                      <span className="flex items-center"><Users className="text-gray-600" /> {slot.currentBookings}/{slot.capacity}</span>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Workout Selection & Personal Trainer */}
+      {selectedSlot && (
+        <div className="mt-10 grid md:grid-cols-2 gap-8">
+          {/* Workout Selection */}
+          <div>
+            <h2 className="text-2xl font-bold mb-4">Choose Your Workout</h2>
+            <div className="grid grid-cols-2 gap-4">
+              {['Cardio', 'Chest', 'Legs', 'Back', 'Arms', 'Yoga'].map(workout => (
+                <div
+                  key={workout}
+                  onClick={() => setSelectedWorkout(workout)}
+                  className={`bg-white shadow-md rounded-lg p-4 cursor-pointer transition hover:shadow-lg
+                    ${selectedWorkout === workout ? 'border-2 border-blue-600' : ''}`}
+                >
+                  <span className="flex items-center space-x-2 font-bold"><Dumbbell className="text-blue-600" /> <span>{workout}</span></span>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+          
+          {/* Personal Trainer Selection */}
+          <div>
+            <h2 className="text-2xl font-bold mb-4">Need a Personal Trainer?</h2>
+            <div className="bg-white shadow-md rounded-lg p-6">
+              <label className="flex items-center space-x-2 cursor-pointer">
+                <input 
+                  type="checkbox" 
+                  className="form-checkbox h-5 w-5 text-blue-600" 
+                  checked={personalTrainer} 
+                  onChange={() => setPersonalTrainer(!personalTrainer)}
+                />
+                <span className="text-lg">Yes, I want a personal trainer</span>
+              </label>
+            </div>
           </div>
         </div>
+      )}
 
-        {/* Date and Time Selection + Booking */}
-        <div className="col-span-1">
-          <h2 className="text-2xl font-bold mb-4">Select Date & Time</h2>
-          <div className="bg-white shadow-md rounded-lg p-6">
-            <div className="mb-4 flex items-center space-x-2">
-              <Calendar className="text-blue-600" />
-              <span>{selectedSlot ? selectedSlot.date : 'Select a slot'}</span>
-            </div>
-            <div className="mb-4 flex items-center space-x-2">
-              <Clock className="text-green-600" />
-              <span>{selectedSlot ? selectedSlot.time : 'Select a slot'}</span>
-            </div>
-            <button
-              onClick={handleBooking}
-              disabled={!selectedSlot || selectedSlot.currentBookings >= selectedSlot.capacity}
-              className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition disabled:bg-gray-400 disabled:cursor-not-allowed"
-            >
-              {selectedSlot ? 'Confirm Booking' : 'Select a Slot'}
-            </button>
-          </div>
+      {/* Confirm Booking Button */}
+      {selectedWorkout && (
+        <div className="mt-10">
+          <button
+            onClick={handleBooking}
+            className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
+          >
+            Confirm Booking
+          </button>
         </div>
-      </div>
-
-      {/* Facilities Section */}
-      <div className="mt-10">
-        <h2 className="text-2xl font-bold mb-4">Facilities</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {gym.amenities.map((amenity) => (
-            <div key={amenity} className="flex items-center space-x-2 bg-gray-100 p-3 rounded-lg shadow">
-              {amenity.includes('WiFi') && <Wifi className="text-blue-600" />}
-              {amenity.includes('Shower') && <ShowerHead className="text-blue-600" />}
-              {amenity.includes('Gym Equipment') && <Dumbbell className="text-blue-600" />}
-              <span>{amenity}</span>
-            </div>
-          ))}
-        </div>
-      </div>
+      )}
     </div>
   );
 }
