@@ -7,7 +7,7 @@ import { Gym } from '@/app/schema/gyms';
 import LocationSearch from '../locationSearch/page';
 import Image from 'next/image';
 
-const cities = ["kochi", "Kozhikodu", "mumbai", "Bangalore", "delhi", "kannur"];
+const cities = ["kochi", "Kozhikode", "mumbai", "Bangalore", "delhi", "kannur"];
 
 export default function GymListingPage() {
   const [gyms, setGyms] = useState<Gym[]>([]);

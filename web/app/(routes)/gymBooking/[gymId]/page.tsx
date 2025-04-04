@@ -75,7 +75,7 @@ export default function GymBookingPage() {
           <h2 className="text-2xl font-bold mb-4">Select Date</h2>
           <input 
             type="date" 
-            className=" p-2 rounded-lg w-full border-2 " 
+            className=" p-2 rounded-lg w-full border-2 text-black " 
             min={today}
             onChange={(e) => setSelectedDate(e.target.value)} 
           />

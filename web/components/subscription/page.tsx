@@ -9,7 +9,7 @@ const subscriptionPlans: SubscriptionPlan[] = [
   {
     id: 'basic',
     name: 'Basic Membership',
-    price: 29.99,
+    price: 2999,
     description: 'Perfect for fitness beginners',
     features: [
       'Access to gym equipment',
@@ -21,7 +21,7 @@ const subscriptionPlans: SubscriptionPlan[] = [
   {
     id: 'premium',
     name: 'Premium Membership',
-    price: 49.99,
+    price: 4999,
     description: 'Advanced fitness experience',
     features: [
       'All Basic features',
@@ -34,7 +34,7 @@ const subscriptionPlans: SubscriptionPlan[] = [
   {
     id: 'elite',
     name: 'Elite Membership',
-    price: 79.99,
+    price: 7999,
     description: 'Ultimate fitness transformation',
     features: [
       'All Premium features',
@@ -72,7 +72,7 @@ const SubscriptionCard: React.FC = () => {
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">{plan.name}</h2>
             <p className="text-gray-600 mb-4">{plan.description}</p>
             <div className="text-4xl font-bold text-blue-600 mb-6">
-              ${plan.price.toFixed(2)}/month
+              ₹{plan.price.toFixed(2)}/month
             </div>
             <ul className="space-y-3 mb-6">
               {plan.features.map((feature) => (
