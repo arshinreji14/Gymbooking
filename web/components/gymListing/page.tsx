@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { MapPin, Dumbbell } from 'lucide-react';
 import { Gym } from '@/app/schema/gyms';
 import LocationSearch from '../locationSearch/page';
+import Image from 'next/image';
 
 const cities = ["kochi", "Kozhikodu", "mumbai", "Bangalore", "delhi", "kannur"];
 
@@ -32,37 +33,59 @@ export default function GymListingPage() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">Find Your Gym</h1>
-      
-      <LocationSearch onSearch={fetchGyms} />
+    <h1 className="text-3xl font-bold mb-6">Find Your Gym</h1>
 
-      {/* City Filter */}
-      <div className="grid grid-cols-3 gap-2 md:grid-cols-6 mb-6">
-        {cities.map((city) => (
-          <button 
-            key={city} 
-            className={`text-sm px-3 py-2 rounded-md border ${selectedCity === city ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700'} hover:bg-blue-500 hover:text-white transition`}
-            onClick={() => {
-              setSelectedCity(city);
-              fetchGyms(city);
-            }}
+    {/* Search Component */}
+    <LocationSearch onSearch={fetchGyms} />
+
+    {/* City Filter */}
+    <div className="grid grid-cols-3 gap-2 md:grid-cols-6 mb-6">
+      {cities.map((city) => (
+       <button 
+       key={city} 
+       className={`text-sm px-4 py-2 rounded-sm border-2 font-extrabold 
+         transition-all duration-300 ease-in-out 
+         shadow-md hover:shadow-lg 
+         ${selectedCity === city 
+           ? 'bg-gradient-to-r from-blue-500 to-blue-700 text-white border-transparent' 
+           : 'bg-white text-gray-800 border-gray-300 hover:bg-indigo-100 hover:text-black'}
+       `}
+       onClick={() => {
+         setSelectedCity(city);
+         fetchGyms(city);
+       }}
+     >
+       {city}
+     </button>
+     
+      ))}
+    </div>
+
+    {/* Gym Listing */}
+    {loading ? (
+      <div className="text-center">Loading gyms...</div>
+    ) : gyms.length === 0 ? (
+      <div className="text-center text-gray-500">No gyms found. Try a different search.</div>
+    ) : (
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {gyms.map((gym) => (
+          <div 
+            key={gym.id} 
+            className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
           >
-            {city}
-          </button>
-        ))}
-      </div>
+            {/* Gym Image */}
+            <div className="relative w-full h-48">
+              <Image
+                src={gym.imageurl || "/default-gym.jpg"} // Default image if gym image is missing
+                alt={gym.name}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-t-lg"
+              />
+            </div>
 
-      {loading ? (
-        <div className="text-center">Loading gyms...</div>
-      ) : gyms.length === 0 ? (
-        <div className="text-center text-gray-500">No gyms found. Try a different search.</div>
-      ) : (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {gyms.map((gym) => (
-            <div 
-              key={gym.id} 
-              className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition-shadow"
-            >
+            {/* Gym Details */}
+            <div className="p-6">
               <h2 className="text-2xl font-semibold mb-4">{gym.name}</h2>
               
               <div className="flex items-center text-gray-600 mb-4">
@@ -70,6 +93,7 @@ export default function GymListingPage() {
                 {gym.address}, {gym.city}, {gym.state} {gym.zipCode}
               </div>
 
+              {/* Facilities */}
               <div className="mb-4">
                 <h3 className="font-semibold mb-2">Facilities</h3>
                 <div className="flex flex-wrap gap-2">
@@ -85,9 +109,10 @@ export default function GymListingPage() {
                 </div>
               </div>
 
+              {/* Price & Booking */}
               <div className="flex justify-between items-center">
                 <span className="text-xl font-bold text-blue-600">
-                  ${gym.membershipPrice}/month
+                  ₹{gym.membershipPrice}/Day
                 </span>
                 <Link 
                   href={`/gymBooking/${gym.id}`}
@@ -97,9 +122,10 @@ export default function GymListingPage() {
                 </Link>
               </div>
             </div>
-          ))}
-        </div>
-      )}
-    </div>
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
   );
 }

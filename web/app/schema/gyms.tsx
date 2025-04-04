@@ -4,6 +4,7 @@ export interface Gym {
     name: string;
     address: string;
     city: string;
+    imageurl: string;
     state: string;
     zipCode: string;
     amenities: string[];

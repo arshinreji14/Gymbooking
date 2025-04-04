@@ -81,15 +81,15 @@ const HomepageBanner = () => {
       {/* Navigation Buttons */}
       <button 
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 rounded-full p-2 z-20"
+        className="absolute left-4 top-1/2 -translate-y-1/2  rounded-full p-2 z-20"
       >
-        <ChevronLeft className="text-white w-8 h-8" />
+        <ChevronLeft className="text-white w-8 h-8 hidden md:block" />
       </button>
       <button 
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 rounded-full p-2 z-20"
+        className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full p-2 z-20 "
       >
-        <ChevronRight className="text-white w-8 h-8" />
+        <ChevronRight className="text-white w-8 h-8 md:block hidden" />
       </button>
 
       {/* Slide Indicators */}

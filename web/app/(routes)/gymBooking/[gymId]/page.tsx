@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation';
 import { Clock, Users, Dumbbell, } from 'lucide-react';
 import { BookingSlot, Gym } from '@/app/schema/gyms';
 import { gymData } from '@/app/data/gyms';
+import Image from 'next/image';
 
 export default function GymBookingPage() {
   const params = useParams();
@@ -32,25 +33,49 @@ export default function GymBookingPage() {
   return (
     <div className="container mx-auto px-4 py-8 h-auto md:h-full mb-32">
       <h1 className="text-black text-4xl font-bold mt-20 mb-10 flex justify-center">Select Your Slot for Booking</h1>
-
       <div className="grid md:grid-cols-3 gap-8">
         {/* Gym Details */}
         <div className="col-span-1">
-          <h1 className="text-3xl font-bold mb-4">{gym.name}</h1>
-          <div className="bg-white shadow-md rounded-lg p-6">
-            <h2 className="text-xl font-semibold">Location</h2>
-            <p>{gym.address}, {gym.city}, {gym.state} {gym.zipCode}</p>
-            <h2 className="text-xl font-semibold mt-4">Price</h2>
-            <h2 className="font-bold text-3xl text-green-500">Rs {gym.membershipPrice}</h2>
-          </div>
+      <h1 className="text-3xl font-bold mb-4">{gym.name}</h1>
+      <div className="bg-white shadow-md rounded-lg p-4">
+        {/* First Gym Image */}
+        <Image
+          src={gym.imageurl} 
+          alt={gym.name} 
+          width={500} 
+          height={300} 
+          className="w-full h-64 object-cover rounded-lg mb-4"
+        />
+        <h2 className="text-xl font-semibold">Location</h2>
+        <p>{gym.address}, {gym.city}, {gym.state} {gym.zipCode}</p>
+         <div className="mb-4">
+                        <h3 className="font-semibold mb-2">Facilities</h3>
+                        <div className="flex flex-wrap gap-2">
+                          {gym.facilities.slice(0, 3).map((facility) => (
+                            <span 
+                              key={facility} 
+                              className="flex items-center text-blue-600 px-2 py-1 rounded-full text-sm"
+                            >
+                              <Dumbbell className="mr-1 w-4 h-4" />
+                              {facility}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+<div className='flex justify-between px-4'>
+        <h2 className="text-2xl font-bold mt-4">Price</h2>
+        <h2 className="font-bold text-3xl text-green-500">₹{gym.membershipPrice}</h2>
         </div>
+      </div>
+    </div>
+
 
         {/* Date Selection */}
         <div className="col-span-1">
           <h2 className="text-2xl font-bold mb-4">Select Date</h2>
           <input 
             type="date" 
-            className=" p-2 rounded-lg w-auto border-2 " 
+            className=" p-2 rounded-lg w-full border-2 " 
             min={today}
             onChange={(e) => setSelectedDate(e.target.value)} 
           />
